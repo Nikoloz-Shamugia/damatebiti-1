@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="">ელ ფოსტა:</label>
+        <input type="email" placeholder="მიუთითეთ ელ ფოსტა..." id="input1">
+
+        <label for="">პაროლი:</label>
+        <input type="password" placeholder="მიუთითეთ პაროლი..." id="input2">
+
+        <label for="">ტეელფონის ნომერი:</label>
+        <input type="number" placeholder="მიუთითეთ ნომერი..." id="input3">
+
+        <label for="">ქალაქი:</label>
+        <input type="text" placeholder="მიუთითეთ ქალაქი..." id="input4">
+
+        <button id="button">submit</button>
+    </form>
+    
+
+    <script>
+        // const input1 = document.getElementById('input1')
+        // const value1 = input1.value1
+        // const input2 = document.getElementById('input2')
+        // const value2 = input1.value2
+        // const input3 = document.getElementById('input3')
+        // const value3 = input1.value3
+        // const input4 = document.getElementById('input4')
+        // const value4 = input1.value4
+
+        // const button = document.querySelector('button')
+        // button.addEventListener('click' , () => {
+        //     if(value1 === '' || value2 === '' || value3 === '' || value4 === ''){
+        //         alert('გთხოვთ შეავსოთ ყველა ველი')
+        //     }
+        //     else{
+        //         alert('ფორმა წარმატებით გაიგზავნა')
+        //     }
+        // })
+        const input1 = document.getElementById('input1');
+        const value1 = input1.value;
+
+        const input2 = document.getElementById('input2');
+        const value2 = input2.value;
+
+        const input3 = document.getElementById('input3');
+        const value3 = input3.value;
+
+        const input4 = document.getElementById('input4');
+        const value4 = input4.value;
+
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const input1 = document.getElementById('input1');
+            const value1 = input1.value;
+
+            const input2 = document.getElementById('input2');
+            const value2 = input2.value;
+
+            const input3 = document.getElementById('input3');
+            const value3 = input3.value;
+
+            const input4 = document.getElementById('input4');
+            const value4 = input4.value;
+
+            if (value1 === '' || value2 === '' || value3 === '' || value4 === '') {
+                alert('გთხოვთ შეავსოთ ყველა ველი');
+            } else {
+                alert('ფორმა წარმატებით გაიგზავნა')
+                form.submit();
+                localStorage.setItem( 'input1' , input1)
+                localStorage.setItem('input2' , input2)
+            }
+        });
+
+
+// const button = document.querySelector('button');
+// button.addEventListener('click', () => {
+//     if (value1 === '' || value2 === '' || value3 === '' || value4 === '') {
+//         alert('გთხოვთ შეავსოთ ყველა ველი');
+//     } else {
+//         alert('ფორმა წარმატებით გაიგზავნა');
+//     }
+// });
+
+        
+
+
+    </script>
+</body>
+</html>
